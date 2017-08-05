@@ -9,6 +9,10 @@
         {{this.burger_name}}
 
         <form action="/{{this.id}}?_method=PUT" method="POST">
+          <div class="form-group">
+            <label for="ca">Eater's Name:</label>
+            <input type="text" id="ca" name="name">
+          </div>
           <button type="submit">Devour</button>
         </form>
 
@@ -24,6 +28,7 @@
     {{#if this.devoured}}
       <li>
         {{this.burger_name}}
+        Eaten by: {{this.eaten_by}}
       </li>
     {{/if}}
   {{/each}}
